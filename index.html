@@ -11,23 +11,56 @@
             margin: 0;
             padding: 0;
             background-color: #e1e1e1;
+            font-size: 14px;
             
         }
+fieldset{
+    margin: 30px 5px 5px 5px;
+    
+    padding: 10px;
+    border-radius: 0px 0px 0px 50px;
 
+}
+p{
+    text-align: left;
+}
+li{
+    margin-top: 20px;
+text-align: left;
+}
+@keyframes field {
+    0%{
+       height: 0px;
+    }
+
+    100%{
+      height: auto;
+    }
+}
+legend{
+font-size: 25px;
+color: white;
+text-shadow: 1px 1px 3px #000000;
+text-align: center;
+
+
+}
         header {
-            background-color: #333;
+            background: linear-gradient(to right, #e1e1e1,#e1e1e1, #000000,#e1e1e1, #e1e1e1); /* Gradiëntkleuren */
+     border: none;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 1px;
             position: relative;
             border-radius: 0px 0px 20px 20px;
-           
+
         }
-header img{
+
+img{
     border-radius: 50%;
-    border: 4px solid #fff;
-    margin-top: 10px;
-    transition: width 0.5s ease;
+    box-shadow: black 5px 5px 7px;
+  border: none;
+   transition: width 0.5s ease;
   
     animation: float 1s ease-in-out alternate;
     transform-style: preserve-3d;
@@ -54,7 +87,7 @@ img:hover{
             padding: 20px;
             background-color: #fff;
             border-radius: 0px 50px 0px 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
 
               
         }
@@ -82,28 +115,38 @@ div{
           padding: 10px 20px;
             background-color: #333;
             color: #fff;
-            border: none;
+            border: 0px;
             cursor: pointer;
             transition: background-color 0.5s ease;
             margin-bottom: 5px;
             margin-top: 5px;   
-            animation: bot 3s ease-in-out infinite alternate;
-    transform-style: preserve-3d;
+            border-radius: 20px 0px 0px 20px ;
+
         }
-        @keyframes bot {
-    0%{
-        border: none;
-        border-radius: 0px 10px 10px 10px;
-    }
-    50%{
-        border: none;
-        border-radius: 10px 10px 10px 0px;
-    }
-    100%{
-        border: none;
-        border-radius: 0px 10px 10px 10px;
-    }
-}
+        .buton {
+          padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 0px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            margin-bottom: 5px;
+            margin-top: 5px;   
+            border-radius: 0px 20px 20px 0px ;
+
+        }
+        .buttton {
+          padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: 0px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+            margin-bottom: 5px;
+            margin-top: 5px;   
+border-radius: 0% 0% 0% 0% ;
+        }
+
         button:hover {
             background-color: #555;
         }
@@ -132,27 +175,41 @@ div{
         .down:hover {
             background-color: rgb(46, 105, 44);
         }
+     button:active{
+        background-color: #000000;
      
-
+     }
+     hr{
+        border: none;
+       height: 1px;
+        background: linear-gradient(to right, #ffffff, #000000, #ffffff); /* Gradiëntkleuren */
+     
+     }
     </style>
 </head>
 <body onload="showContactInfo()">
+   <center>
+    <fieldset>
+        <legend>CV - Amanj Abdulkhaleq</legend>
  <header>
-        <h1>CV - Amanj Abdulkhaleq</h1>
-        <img src="pic.jpg" alt="profilefoto" width="100" >
+        
+       
     </header>
     
     <div class="container">
-        <center>
+       
+            <img src="pic.jpg" alt="profilefoto" width="100" >
         <section id="contact-info" class="content">
-            <h2>Contactgegevens</h2>
+            <div><h2> Amanj Abdulkhaleq</h2></div>
+            <h3>Contactgegevens</h3>
+           
             <div><strong>Adres:</strong> Grétrystraat 43, 2018 Antwerpen, België</div>
             <div><strong>Geboortedatum:</strong> 05 januari 2001</div>
             <div><strong>Nationaliteit:</strong> Irakees</div>
             <div><strong>Geslacht:</strong> Mannelijk</div>
             <div><strong>Gsm:</strong> +32470831820</div>
             <div><strong>E-mail:</strong> amanjhemn25@gmail.com</div>
-        </section></center> 
+        </section>
         <hr>
       
 
@@ -165,18 +222,18 @@ div{
         <!-- Andere secties van je CV hier -->
     
  
-    <button onclick="toggleSection('work-experience')">Werkervaring</button>
+    <button onclick="toggleSection('work-experience')" class="buttton">Werkervaring</button>
     <section id="work-experience" class="content">
         <h2>Werkervaring</h2>
         <ul>
-            <li><strong>Verkoper bij Lukoil</strong> - 11-2022 tot heden</li>
-            <li><strong>Winkelbediende bij Relay</strong> - 07-2023 tot heden</li>
+            <li><strong>Verkoper bij Lukoil</strong> - 11-2022 tot 04-2024</li>
+            <li><strong>Winkelbediende bij Relay</strong> - 07-2023 tot 04-2024</li>
             <li><strong>Verpakker bij All Detection bv</strong> - 02-2022 tot 04-2022</li>
             <li><strong>Keukenmedewerker bij Restaurant Irak</strong> - 02-2018 tot 01-2021</li>
         </ul>
         <hr>   </section>
     
-<button onclick="toggleSection('education')">Studies</button>
+<button onclick="toggleSection('education')" class="buton">Studies</button>
     <section id="education" class="content">
         <h2>Studies</h2>
         <div><strong>Computer Instituut voor Web Design</strong> - 4de jaar, 2016 (Buiten de EU)</div>
@@ -195,7 +252,7 @@ div{
         <hr>  </section>
 
 
-    <button onclick="toggleSection('languages')">Talen</button>
+    <button onclick="toggleSection('languages')" class="buttton">Talen</button>
     <section id="languages" class="content">
         <h2>Talen</h2>
         <ul>
@@ -207,7 +264,7 @@ div{
         <hr> </section>
 
 
-    <button onclick="toggleSection('skills')">Vaardigheden</button>
+    <button onclick="toggleSection('skills')" class="buton">Vaardigheden</button>
     <section id="skills" class="content">
         <h2>Vaardigheden</h2>
         <ul>
@@ -223,11 +280,11 @@ div{
 
     <footer>
         
- <p>&copy; 2024 CV - Amanj Abdulkhaleq</p>
-    </footer><center>
+ <div>&copy; 2024 CV - Amanj Abdulkhaleq</div>
+    </footer>
     <a href="AmanjAbdulkhaleq.pdf" download="AmanjAbdulkhaleq.pdf">
         <button class="down" onclick="downloadCV()">download CV (PDF)</button></a><br><br>
-    </center>
+    </fieldset></div></center>
     <script>
         function showContactInfo() {
             var contactInfo = document.getElementById('contact-info');
